@@ -1,281 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-    <title>VELNO | Premium Innerwear</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>VELNO | Premium Innerwear</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Favicon -->
-   <link rel="shortcut icon" href="./images/velno.png" type="image/x-icon">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #111;
-    }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    /* Navbar */
-    .navbar {
-      background: #fff;
-    }
+<link rel="shortcut icon" href="./images/velno.png">
 
-    /* Hero */
-    .hero {
-      height: 90vh;
-      background: #000;
-      color: #fff;
-    }
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  color: #111;
+}
 
-    /* Buttons */
-    .btn-dark {
-      border-radius: 30px;
-      padding: 12px 28px;
-    }
+.hero {
+  height: 90vh;
+  background: #000;
+  color: #fff;
+}
 
-    /* Cards */
-    .card {
-      border: none;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: 0.3s ease;
-    }
+section {
+  padding: 80px 0;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
-    .card img {
-      border-radius: 16px 16px 0 0;
-      height: 260px;
-      object-fit: cover;
-    }
+.card img {
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
 
-    .price {
-      color: #666;
-      font-weight: 500;
-    }
+.price {
+  color: #666;
+}
 
-    /* Section spacing */
-    section {
-      padding: 80px 0;
-    }
+.btn-dark {
+  border-radius: 30px;
+}
 
-    footer {
-      background: #000;
-      color: #fff;
-    }
-    @media (max-width: 768px) {
-        .hero {
-            height: 80vh;
-            padding-top: 80px;
-        }
+.sticky-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 999;
+}
 
-        h1 {
-            font-size: 2rem;
-        }
-
-        section {
-            padding: 60px 20px;
-        }
-
-        .navbar-brand img {
-            height: 30px;
-        }
-        }
-
-  </style>
+@media (max-width:768px) {
+  .hero {
+    height: auto;
+    padding: 120px 20px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center fw-bold">
-      <img src="./images/velno.jpg" height="38" class="me-2">
-      VELNO
+    <a class="navbar-brand fw-bold">
+      <img src="./images/velno.jpg" height="36"> VELNO
     </a>
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link">Home</a></li>
-      <li class="nav-item"><a class="nav-link">Collection</a></li>
-      <li class="nav-item"><a class="nav-link">Contact</a></li>
-    </ul>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero d-flex align-items-center text-center">
   <div class="container">
-    <h1 class="display-5 fw-semibold">Where Comfort Begins</h1>
-    <p class="lead text-secondary mt-3">
-      Premium innerwear crafted for everyday confidence
-    </p>
-    <button class="btn btn-light btn-lg mt-4 px-5">Shop Collection</button>
-  </div>
-</section>
-<!-- ABOUT -->
-<section>
-  <div class="container text-center">
-    <h2 class="fw-semibold">Designed for Everyday Comfort</h2>
+    <h1 class="fw-semibold">Where Comfort Begins</h1>
     <p class="text-secondary mt-3">
-      At VELNO, we believe innerwear should feel natural — soft, breathable, and invisible to the body.
-      Every piece is crafted to support confidence from morning to night.
+      Premium innerwear for men, women & kids
     </p>
+    <a href="#collection" class="btn btn-light mt-4 px-5">Shop Collection</a>
   </div>
 </section>
 
-<!-- PRODUCTS -->
-<section>
-  <div class="container">
-    <h2 class="text-center fw-semibold mb-5">Best Sellers</h2>
+<!-- COLLECTION -->
+<section id="collection">
+<div class="container">
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card text-center">
-          <img src="./images/products/mens-2.jpg">
-          <div class="card-body">
-            <h5 class="fw-semibold">Men Boxer</h5>
-            <p class="price">₹499</p>
-            <select class="form-select mb-2" id="size">
-              <option value="S">Size S</option>
-              <option value="M">Size M</option>
-              <option value="L">Size L</option>
-              <option value="XL">Size XL</option>
-            </select>
+<h2 class="text-center fw-semibold mb-5">Our Collection</h2>
 
-            <input type="number" class="form-control mb-2" id="qty" value="1" min="1">
+<div class="row g-4">
 
-            <button class="btn btn-dark w-100"
-            onclick="addToCart('Men Boxer', 499)">
-            Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
+<!-- MEN -->
+<div class="col-md-4">
+<div class="card text-center">
+<img src="./images/products/mens-1.jpg">
+<div class="card-body">
+<h5>Men’s Trunk</h5>
+<p class="price">₹499</p>
 
-      <div class="col-md-4">
-        <div class="card text-center">
-          <img src="./images/products/mens-1.jpg">
-          <div class="card-body">
-            <h5 class="fw-semibold">Men Brief</h5>
-            <p class="price">₹399</p>
-              <select class="form-select mb-2" id="size">
-              <option value="S">Size S</option>
-              <option value="M">Size M</option>
-              <option value="L">Size L</option>
-              <option value="XL">Size XL</option>
-            </select>
+<select class="form-select mb-2 size">
+<option>S</option><option>M</option><option>L</option><option>XL</option>
+</select>
 
-            <input type="number" class="form-control mb-2" id="qty" value="1" min="1">
+<select class="form-select mb-2 color">
+<option>Black</option><option>Navy</option><option>Grey</option>
+</select>
 
-            <button class="btn btn-dark w-100"
-            onclick="addToCart('Men Boxer', 499)">
-            Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
+<input type="number" class="form-control mb-2 qty" value="1" min="1">
 
-      <div class="col-md-4">
-        <div class="card text-center">
-          <img src="./images/products/mens.png">
-          <div class="card-body">
-            <h5 class="fw-semibold">Cotton Vest</h5>
-            <p class="price">₹299</p>
-             <select class="form-select mb-2" id="size">
-              <option value="S">Size S</option>
-              <option value="M">Size M</option>
-              <option value="L">Size L</option>
-              <option value="XL">Size XL</option>
-            </select>
+<button class="btn btn-dark w-100"
+onclick="addToCart(this,'Men’s Trunk',499)">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
 
-            <input type="number" class="form-control mb-2" id="qty" value="1" min="1">
+<!-- WOMEN -->
+<div class="col-md-4">
+<div class="card text-center">
+<img src="./images/products/mens-1.jpg">
+<div class="card-body">
+<h5>Women’s Panties</h5>
+<p class="price">₹399</p>
 
-            <button class="btn btn-dark w-100"
-            onclick="addToCart('Men Boxer', 499)">
-            Add to Cart
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<select class="form-select mb-2 size">
+<option>80cm</option><option>85cm</option><option>90cm</option>
+<option>95cm</option><option>100cm</option>
+</select>
+
+<select class="form-select mb-2 color">
+<option>Black</option><option>Red</option><option>Blue</option>
+<option>Pink</option><option>White</option>
+</select>
+
+<input type="number" class="form-control mb-2 qty" value="1" min="1">
+
+<button class="btn btn-dark w-100"
+onclick="addToCart(this,'Women’s Panties',399)">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+<!-- KIDS -->
+<div class="col-md-4">
+<div class="card text-center">
+<img src="./images/products/mens-1.jpg">
+<div class="card-body">
+<h5>Kids Bloomer</h5>
+<p class="price">₹299</p>
+
+<select class="form-select mb-2 size">
+<option>60cm</option><option>65cm</option>
+<option>70cm</option><option>75cm</option>
+</select>
+
+<select class="form-select mb-2 color">
+<option>Yellow</option><option>Blue</option><option>Pink</option>
+</select>
+
+<input type="number" class="form-control mb-2 qty" value="1" min="1">
+
+<button class="btn btn-dark w-100"
+onclick="addToCart(this,'Kids Bloomer',299)">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
-<!-- WHY VELNO -->
-<section style="background:#f6f6f6;">
-  <div class="container text-center">
-    <h2 class="fw-semibold">Why VELNO</h2>
-    <p class="text-secondary mt-3">
-      Designed with precision. Crafted for comfort.
-    </p>
-
-    <p class="mt-4">
-      ✔ Premium breathable fabric <br>
-      ✔ Perfect fit for all-day wear <br>
-      ✔ Direct from manufacturer pricing
-    </p>
-  </div>
-</section>
-<!-- SIZE GUIDE -->
-<section style="background:#fff;">
-  <div class="container text-center">
-    <h5 class="fw-semibold">Size Guide</h5>
-    <p class="text-secondary">
-      Available sizes: S • M • L • XL • XXL
-    </p>
-  </div>
-</section>
-
-<!-- PAYMENT -->
-<section class="text-center">
-  <div class="container">
-    <h5 class="fw-semibold">Secure & Trusted Payments</h5>
-    <p class="text-secondary">
-      UPI • Credit Card • Debit Card • Net Banking
-    </p>
-    <small class="text-secondary">
-      Payment gateway will be integrated after final approval
-    </small>
-  </div>
+<!-- PAYMENT INFO -->
+<section class="text-center bg-light">
+<div class="container">
+<h5>Secure Payments</h5>
+<p class="text-secondary">
+UPI • Cards • Net Banking • COD
+</p>
+<small class="text-secondary">GST invoice will be provided</small>
+</div>
 </section>
 
 <!-- FOOTER -->
-<footer class="text-center py-4">
-  © 2026 VELNO — Where Comfort Begins
+<footer class="text-center py-4 bg-black text-white">
+© 2026 VELNO — Where Comfort Begins
 </footer>
-<!-- Add to cart -->
+
+<!-- STICKY CART -->
+<div class="sticky-cart" onclick="goToCart()">🛒 Cart</div>
+
 <script>
-function addToCart(name, price) {
-  let size = document.getElementById('size').value;
-  let qty = parseInt(document.getElementById('qty').value);
+function addToCart(btn, name, price) {
+  let card = btn.closest('.card-body');
+  let size = card.querySelector('.size').value;
+  let color = card.querySelector('.color').value;
+  let qty = parseInt(card.querySelector('.qty').value);
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  cart.push({
-    name: name,
-    price: price,
-    size: size,
-    qty: qty
-  });
+  cart.push({ name, price, size, color, qty });
 
   localStorage.setItem('cart', JSON.stringify(cart));
+  alert("Added to cart");
+}
+
+function goToCart() {
   window.location.href = "./cart/";
 }
 </script>
 
-<!-- Section scroll demo -->
-<script>
-  document.querySelectorAll('a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      alert('Section scroll demo – full navigation after approval');
-    });
-  });
-</script>
-
 </body>
 </html>
-
